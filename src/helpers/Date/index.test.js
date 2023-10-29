@@ -11,6 +11,10 @@ describe("Date helper", () => {
             const month = getMonth(new Date("2022-07-08"));
             expect(month).toBe("juillet");
         });
+        it("the function return juillet for 2022-07-08 as date", () => {
+            const month = getMonth(new Date("2022-08-08"));
+            expect(month).not.toBe("juillet");
+        });
     });
 })
 
