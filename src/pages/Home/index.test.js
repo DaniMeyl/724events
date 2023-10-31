@@ -1,6 +1,6 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import Home from "./index";
-import EventCard from "../../components/EventCard";
+
 
 describe("When Form is created", () => {
   it("a list of fields card is displayed", async () => {
@@ -35,7 +35,6 @@ describe("When Form is created", () => {
 describe("When a page is created", () => {
   it("a list of events is displayed", () => {
     render(<Home />);
-    render(<EventCard />);
     const events = screen.getByTestId("events-testid");
     expect(events).toBeInTheDocument();
     
@@ -53,7 +52,6 @@ describe("When a page is created", () => {
   })
   it("an event card, with the last event, is displayed", () => {
     render (<Home />)
-    render (<EventCard />)
     const lastCard = screen.getByTestId('lastcard-testid')
     expect(lastCard).toBeInTheDocument();
   })
